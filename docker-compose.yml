@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: checkpoint_backend_app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    command: npm run start
+    environment:
+      - NODE_ENV=development
